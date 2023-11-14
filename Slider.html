@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.css"
+  />
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.1/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
+    <style>
+      .content .Para {
+    color: #fff;
+    /* padding-bottom: 74px; */
+  }
+  .content-1 {
+    color: white;
+    padding-bottom: 74px;
+  }
+  .content-2 .Para {
+    color: white;
+  }
+  .content-2 {
+    color: white;
+    padding-bottom: 74px;
+  }
+  .content-3 {
+    color: #fff;
+    padding-bottom: 74px;
+  }
+  .Para {
+    display: none;
+  }
+  .wrapper {
+    width: 89%;
+    display: flex;
+    align-items: center;
+    /* margin-left: 40px; */
+  }
+
+  .swiper-avatar p {
+    display: none;
+  }
+
+  .swiper-slide-active .Para {
+    display: block;
+  }
+  .content-1 img,
+  .content-1 img {
+    width: 85%;
+    height: auto;
+  }
+  .content-2 img,
+  .content-2 img {
+    width: 100%;
+    height: auto;
+  }
+  .content-3 img,
+  .content-3 img {
+    width: 100%;
+    height: auto;
+  }
+  .swiper {
+    padding: 1.5em;
+  }
+
+  .content-wrapper {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .content-1 {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  .content-2 {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  .content-3 {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .content :first-child {
+    margin: 0;
+  }
+  .swiper-avatar {
+    width: 81%;
+    max-width: 117px;
+    height: 62%;
+  }
+
+  .swiper-avatar img {
+    border-radius: 500px;
+  }
+  .cite {
+    margin-top: 23px;
+    font-size: 14px;
+  }
+  .swiper-wrapper {
+    align-items: center;
+    width: 100%;
+  }
+  .swiper-pointer-events {
+    width: 67% !important;
+    margin-right: 10px;
+  }
+  .swiper-slide .swiper-slide-duplicate .swiper-slide-prev {
+    width: 24%;
+    margin: 0;
+  }
+  .swiper-slide {
+    margin: 0;
+    width: 80%;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+    background-image: url(assets/images/slide.png);
+    margin-right: 2px;
+  }
+
+  .swiper-slide-active {
+    background: rgba(255, 255, 255, 1);
+    opacity: 1;
+    color: #212121;
+    transform: scale(1.1);
+    display: block;
+    background-image: url(assets/images/bkg.png);
+  }
+  .swiper .swiper-nav-wrapper {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: auto;
+    padding-top: 3em;
+  }
+  .swiper-slide .swiper-slide-duplicate .swiper-slide-duplicate-next {
+    margin-right: 76px;
+    background-image: url(assets/images/slide.png);
+  }
+  .swiper-slide .swiper-slide-prev {
+    width: 31%;
+    margin-right: 0;
+    margin-top: 50px;
+
+    background-image: url(assets/images/slide.png);
+  }
+  .swiper-slide .swiper-slide-next {
+    width: 31%;
+    margin-top: 50px;
+    background-image: url(assets/images/slide.png);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 0;
+    top: auto;
+    left: auto;
+    right: auto;
+    position: relative !important;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: block;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='9px' height='16px' viewBox='0 0 9 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='chevron-right' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpath d='M8.674805,7.066406 L1.924805,0.316406 C1.696288,0.105468 1.432619,0 1.133789,0 C0.834959,0 0.57129,0.105468 0.342773,0.316406 C0.114257,0.544923 0,0.808592 0,1.107422 C0,1.406251 0.114257,1.669921 0.342773,1.898438 L6.301758,7.857422 L0.342773,13.816406 C0.114257,14.044923 0,14.308592 0,14.607422 C0,14.906251 0.114257,15.169921 0.342773,15.398438 C0.465821,15.521485 0.584472,15.609375 0.69873,15.662109 C0.812989,15.714844 0.958007,15.741211 1.133789,15.741211 C1.309571,15.741211 1.454589,15.714844 1.568848,15.662109 C1.683106,15.609375 1.801757,15.521485 1.924805,15.398438 L8.674805,8.648438 C8.903321,8.419921 9.017578,8.156251 9.017578,7.857422 C9.017578,7.558592 8.903321,7.294923 8.674805,7.066406 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='9px' height='16px' viewBox='0 0 9 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='chevron-right' transform='translate(4.508789, 7.870605) rotate(-180.000000) translate(-4.508789, -7.870605) translate(-0.000000, -0.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpath d='M8.674805,7.066406 L1.924805,0.316406 C1.696288,0.105468 1.432619,0 1.133789,0 C0.834959,0 0.57129,0.105468 0.342773,0.316406 C0.114257,0.544923 0,0.808592 0,1.107422 C0,1.406251 0.114257,1.669921 0.342773,1.898438 L6.301758,7.857422 L0.342773,13.816406 C0.114257,14.044923 0,14.308592 0,14.607422 C0,14.906251 0.114257,15.169921 0.342773,15.398438 C0.465821,15.521485 0.584472,15.609375 0.69873,15.662109 C0.812989,15.714844 0.958007,15.741211 1.133789,15.741211 C1.309571,15.741211 1.454589,15.714844 1.568848,15.662109 C1.683106,15.609375 1.801757,15.521485 1.924805,15.398438 L8.674805,8.648438 C8.903321,8.419921 9.017578,8.156251 9.017578,7.857422 C9.017578,7.558592 8.903321,7.294923 8.674805,7.066406 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-pagination {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    position: relative !important;
+    display: block;
+    width: auto;
+  }
+  .swiper-pagination-bullets {
+    margin: 0;
+  }
+  .swiper-pagination-bullet {
+    margin: 0;
+    background: #fff !important;
+  }
+  .swiper-pagination-bullet {
+    background: #fff !important;
+    transition: all 0.2s ease-in-out;
+  }
+  .swiper-pagination-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    padding: 0 1.5em;
+  }
+  .swiper-pagination-bullet-active {
+    transform: scale(1.5);
+  }
+  @media (max-width:479px) and (min-width:320px){
+       @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+ body, html {
+	 min-height: 100%;
+	 width: 100%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 font-size: 1em;
+	 line-height: 1.2;
+	 background: #18181b;
+	 font-family: "Roboto Condensed", sans-serif;
+	 font-weight: 300;
+	 box-sizing: border-box;
+}
+ body p, html p {
+	 line-height: 1.6;
+}
+ body img, html img {
+	 width: 100%;
+	 height: auto;
+}
+ body .button, html .button {
+	 position: relative;
+	 display: table;
+	 padding: 0.75em 3em;
+	 background: #000;
+	 color: #fff;
+	 text-decoration: none;
+	 margin-top: 1.5em;
+	 text-transform: uppercase;
+}
+ body .button:hover, html .button:hover {
+	 background: #2f2f2f;
+}
+ body .wrapper, html .wrapper {
+	 width: 100%;
+	 max-width: 1200px;
+	 margin: 0 auto;
+	 text-align: center;
+	 color: #fff;
+	 padding: 1.5em;
+}
+ body header, html header {
+	 margin: 0;
+	 padding: 0;
+}
+ * * + * {
+	 margin: 0.75em 0 0;
+}
+ .swiper {
+	 padding: 1.5em;
+}
+.swiper-avatar p {
+    display: none;
+  }
+
+  .swiper-slide-active .Para {
+    display: block;
+  }
+ .swiper .content-wrapper {
+	 position: relative;
+	 display: grid;
+	 grid-template-columns: 1fr;
+	 grid-template-rows: 1fr;
+	 grid-template-areas: ".";
+	 width: 100%;
+	 justify-items: center;
+	 align-items: center;
+}
+ .swiper .content-wrapper .content {
+	 padding: 3em 1.5em;
+	 text-align: center;
+	 display: grid;
+	 justify-items: center;
+	 align-items: center;
+	 margin: 0 auto;
+	 color: #000;
+}
+ .swiper .content-wrapper .content :first-child {
+	 margin: 0;
+}
+ .swiper .content-wrapper .content .swiper-avatar {
+	 width: 100%;
+	 max-width: 125px;
+	 height: auto;
+}
+ .swiper .content-wrapper .content .swiper-avatar img {
+	 border-radius: 500px;
+}
+ .swiper .content-wrapper .content .cite {
+	 font-size: 14px;
+	 font-weight: bold;
+}
+ .swiper .swiper-slide {
+
+	 margin: 0;
+	 height: 100%;
+	 width: 100%;
+	 padding: 0;
+	 /* /* opacity: 0.2;  */
+	 background-image: url(assets/images/slide.png);
+	 border-radius: 6px;
+	 transition: all 0.5s ease-in-out;
+}
+.swiper-slide .swiper-slide-duplicate .swiper-slide-prev {
+    width: 24%;
+    margin: 0;
+  }
+
+  .swiper-slide .swiper-slide-prev {
+    width: 31%;
+    margin-right: 0;
+    margin-top: 50px;
+
+    background-image: url(assets/images/slide.png);
+  }
+  .swiper-slide .swiper-slide-next {
+    width: 31%;
+    margin-top: 50px;
+    background-image: url(assets/images/slide.png);
+  }
+
+ .swiper .swiper-slide.swiper-slide-active {
+	 background-image: url(assets/images/bkg.png);
+	 opacity: 1;
+   overflow: hidden;
+	 transform: scale(1.1);
+}
+ .swiper .swiper-nav-wrapper {
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin: 0 auto;
+	 width: auto;
+	 padding-top: 3em;
+}
+ .swiper .swiper-nav-wrapper .swiper-button-next, .swiper .swiper-nav-wrapper .swiper-button-prev {
+	 top: 0;
+	 top: auto;
+	 left: auto;
+	 right: auto;
+	 position: relative !important;
+}
+ .swiper .swiper-nav-wrapper .swiper-button-next:after, .swiper .swiper-nav-wrapper .swiper-button-prev:after {
+	 display: none;
+}
+ .swiper .swiper-nav-wrapper .swiper-button-next, .swiper .swiper-nav-wrapper .swiper-container-rtl .swiper-button-prev {
+	 background-image: url("data:image/svg+xml,%0A%3Csvg width='9px' height='16px' viewBox='0 0 9 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='chevron-right' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpath d='M8.674805,7.066406 L1.924805,0.316406 C1.696288,0.105468 1.432619,0 1.133789,0 C0.834959,0 0.57129,0.105468 0.342773,0.316406 C0.114257,0.544923 0,0.808592 0,1.107422 C0,1.406251 0.114257,1.669921 0.342773,1.898438 L6.301758,7.857422 L0.342773,13.816406 C0.114257,14.044923 0,14.308592 0,14.607422 C0,14.906251 0.114257,15.169921 0.342773,15.398438 C0.465821,15.521485 0.584472,15.609375 0.69873,15.662109 C0.812989,15.714844 0.958007,15.741211 1.133789,15.741211 C1.309571,15.741211 1.454589,15.714844 1.568848,15.662109 C1.683106,15.609375 1.801757,15.521485 1.924805,15.398438 L8.674805,8.648438 C8.903321,8.419921 9.017578,8.156251 9.017578,7.857422 C9.017578,7.558592 8.903321,7.294923 8.674805,7.066406 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+	 width: 20px;
+	 height: 20px;
+	 background-size: 20px 20px;
+	 background-repeat: no-repeat;
+	 margin: 0;
+	 padding: 0;
+}
+ .swiper .swiper-nav-wrapper .swiper-button-prev, .swiper .swiper-nav-wrapper .swiper-container-rtl .swiper-button-next {
+	 background-image: url("data:image/svg+xml,%0A%3Csvg width='9px' height='16px' viewBox='0 0 9 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='chevron-right' transform='translate(4.508789, 7.870605) rotate(-180.000000) translate(-4.508789, -7.870605) translate(-0.000000, -0.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpath d='M8.674805,7.066406 L1.924805,0.316406 C1.696288,0.105468 1.432619,0 1.133789,0 C0.834959,0 0.57129,0.105468 0.342773,0.316406 C0.114257,0.544923 0,0.808592 0,1.107422 C0,1.406251 0.114257,1.669921 0.342773,1.898438 L6.301758,7.857422 L0.342773,13.816406 C0.114257,14.044923 0,14.308592 0,14.607422 C0,14.906251 0.114257,15.169921 0.342773,15.398438 C0.465821,15.521485 0.584472,15.609375 0.69873,15.662109 C0.812989,15.714844 0.958007,15.741211 1.133789,15.741211 C1.309571,15.741211 1.454589,15.714844 1.568848,15.662109 C1.683106,15.609375 1.801757,15.521485 1.924805,15.398438 L8.674805,8.648438 C8.903321,8.419921 9.017578,8.156251 9.017578,7.857422 C9.017578,7.558592 8.903321,7.294923 8.674805,7.066406 Z' id='Path'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+	 width: 20px;
+	 height: 20px;
+	 background-size: 20px 20px;
+	 background-repeat: no-repeat;
+	 margin: 0;
+	 padding: 0;
+}
+ .swiper-pagination {
+	 margin: 0;
+	 padding: 0;
+	 width: auto;
+	 position: relative !important;
+	 display: block;
+	 width: auto;
+}
+ .swiper-pagination .swiper-pagination-bullets {
+	 margin: 0;
+}
+ .swiper-pagination .swiper-pagination-bullets .swiper-pagination-bullet {
+	 margin: 0;
+	 background: #fff !important;
+}
+ .swiper-pagination-bullet {
+	 background: #fff !important;
+	 transition: all 0.2s ease-in-out;
+}
+ .swiper-pagination-bullets.swiper-pagination-horizontal {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: center;
+	 align-items: center;
+	 bottom: 0;
+	 top: 0;
+	 bottom: 0;
+	 width: auto;
+	 padding: 0 1.5em;
+}
+ .swiper-pagination-bullet-active {
+	 transform: scale(1.5);
+}
+}
+    </style>
+  </head>
+  <body>
+    <div class="review-section">
+      <div class="wrapper container">
+        <div class="swiper-nav-wrapper">
+          <img class="prev" src="assets/images/larrow.png" alt="" />
+          <!-- <img class="swiper-button-prev"></div> -->
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="content-wrapper">
+                <div class="content-1">
+                  <div class="swiper-avatar">
+                    <img src="assets/images/anna.png" />
+                  </div>
+                  <p class="cite">Anna Deo</p>
+
+                  <p class="Para">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Nulla natus numquam repellat veniam, veritatis saepe.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="content-wrapper">
+                <div class="content-2">
+                  <div class="swiper-avatar">
+                    <img src="assets/images/john.png" />
+                  </div>
+                  <p class="cite">John</p>
+                  <p class="Para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat nihil possimus tempora iure facilis molestias.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="content-wrapper">
+                <div class="content-3">
+                  <div class="swiper-avatar">
+                    <img src="assets/images/john.png" />
+                  </div>
+                  <p class="cite">John</p>
+                  <p class="Para">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ipsam harum placeat doloribus tempora excepturi odio.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-nav-wrapper">
+          <img class="next" src="assets/images/rarrow.png" alt="" />
+          <!-- <div class="swiper-button-next"></div> -->
+        </div>
+      </div>
+    </div>
+    @media () and (){}
+    
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+	// Optional parameters
+	direction: "horizontal",
+	loop: true,
+	autoHeight: false,
+	centeredSlides:true,
+	slidesPerView: 1,
+  // Responsive breakpoints
+  breakpoints: {
+		640: {
+      slidesPerView:2,
+			  // spaceBetween: 40,
+    },
+    992: {
+      slidesPerView: 3,
+			  // spaceBetween: 40,
+    }
+  },
+
+	// If we need pagination
+	pagination: {
+		el: ".swiper-pagination"
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: ".next",
+		prevEl: ".prev"
+	}
+
+	// And if we need scrollbar
+	/*scrollbar: {
+    el: '.swiper-scrollbar',
+  },*/
+});
+
+    </script>
+  </body>
+</html>

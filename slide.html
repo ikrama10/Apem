@@ -1,0 +1,212 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clientReviews{
+  height: 850px;
+  margin: 150px 0;
+  padding: 0 162px;
+  text-align: center;
+}
+
+.review-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.swiper{
+  width: 90%;
+  /* width: 82.5%; */
+  height: 26vw;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  align-items: center;
+}
+
+.swiper-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+ .swiper-slide{
+  background-image: url("../images/client1-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.2;
+  transition: all 1s;
+}
+
+
+.swiper-slide h3 {
+  margin: 15px;
+  font-family: var(--secondary-font);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.swiper-slide p {
+  display: none;
+  margin: 15px 50px;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.swiper-slide div img {
+  height: 100px;
+  width: 100px;
+  margin: 15px;
+}
+
+.swiper-slide-active {
+  color: white;
+  opacity: 1;
+  background-image: url("../images/client2-bg.png");
+  width: 400px;
+  height: 400px;
+}
+
+.swiper-slide-active p{
+  display: block;
+}
+
+    </style>
+</head>
+<body>
+    <!-- the clients section start here -->
+    <section class="clientSection">
+        <div class="clientReviews">
+          <h3 class="secondaryHeading">OUR HAPPY CLIENTS</h3>
+          <h2 class="mainHeading">
+            Our Customers Love What <br />
+            We Do For Them
+          </h2>
+  
+          <!-- wrapper for the slider -->
+          <div class="review-wrapper">
+            <!-- use these in your javascript with swiperjs code for arrow -->
+            <div class="left-arrow">
+              <img src="assets/images/left-arrow.png" alt="" />
+            </div>
+  
+            <!-- the main slider class from sliderjs-->
+            <div class="reviews swiper">
+              <!-- the slider wrapper from sliderjs -->
+              <div class="reviewsSlider swiper-wrapper">
+                <!-- the slides -->
+                <div class="clientReview1 swiper-slide">
+                  <img src="assets/images/client1-img.png" alt="" />
+                  <h3>Jimmy Doe</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Recusandae molestias molestiae sit ratione amet in repellat
+                    aliquid magni error, dolorum cupiditate illo a corporis
+                    voluptatem eius officiis inventore iste exercitationem
+                    provident tenetur.
+                  </p>
+                </div>
+                <div class="clientReview2 swiper-slide">
+                  <img src="assets/images/client2-img.png" alt="" />
+                  <h3>Anna Doe</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Recusandae molestias molestiae sit ratione amet in repellat
+                    aliquid magni error, dolorum cupiditate illo a corporis
+                    voluptatem eius officiis inventore iste exercitationem
+                    provident tenetur.
+                  </p>
+                </div>
+                <div class="clientReview3 swiper-slide">
+                  <img src="assets/images/client3-img.png" alt="" />
+                  <h3>John Doe</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Recusandae molestias molestiae sit ratione amet in repellat
+                    aliquid magni error, dolorum cupiditate illo a corporis
+                    voluptatem eius officiis inventore iste exercitationem
+                    provident tenetur.
+                  </p>
+                </div>
+                <div class="clientReview3 swiper-slide">
+                  <img src="assets/images/client3-img.png" alt="" />
+                  <h3>Luck Doe</h3>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Recusandae molestias molestiae sit ratione amet in repellat
+                    aliquid magni error, dolorum cupiditate illo a corporis
+                    voluptatem eius officiis inventore iste exercitationem
+                    provident tenetur.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <!-- use these in your javascript with swiperjs code for arrow -->
+            <div class="right-arrow">
+              <img src="assets/images/right-arrow.png" alt="" />
+            </div>
+          </div>
+          <!-- swiperjs ends here -->
+        </div>
+      </section>
+      <!-- the clients section ends here -->
+
+      <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 2,
+        spaceBetween: 100,
+        grabCursor: true,
+        // autoHeight:'false',
+        effect: "creative",
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+          nextEl: ".right-arrow",
+          prevEl: ".left-arrow",
+        },
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: ["-120%", 0, -500],
+          },
+          next: {
+            shadow: true,
+            translate: ["120%", 0, -500]
+          },
+        },
+        breakpoints: {
+          320:{
+            slidesPerView:1,
+            spaceBetween:10,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+          },
+          1199:{
+            slidesPerView:2,
+            spaceBetween: 80,
+          },
+        },
+      })
+      </script>
+</body>
+</html> -->
